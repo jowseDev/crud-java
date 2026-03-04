@@ -10,7 +10,7 @@ public class ConexaoDAO {
         
     }
         
-    public static void ConexaoDB(){
+    public static void ConectDB(){
        try {
         //Dados para conectar com o banco de dados Postgres
         String dsn = "projeto_1"; //nome do banco de dados(igual ao criado no Postgres)

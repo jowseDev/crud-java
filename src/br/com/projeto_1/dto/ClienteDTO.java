@@ -2,7 +2,7 @@ package br.com.projeto_1.dto;
 
 public class ClienteDTO {
     
-    private String nome_cli, logadouro_cli, bairro_cli, cidade_cli, estado_cli, cep_cli, cpf_cli, rg_cli;
+    private String nome_cli, logradouro_cli, bairro_cli, cidade_cli, estado_cli, cep_cli, cpf_cli, rg_cli;
     private int id_cli, numero_cli;
 
     public String getNome_cli() {
@@ -13,12 +13,12 @@ public class ClienteDTO {
         this.nome_cli = nome_cli;
     }
 
-    public String getLogadouro_cli() {
-        return logadouro_cli;
+    public String getLogradouro_cli() {
+        return logradouro_cli;
     }
 
     public void setLogadouro_cli(String logadouro_cli) {
-        this.logadouro_cli = logadouro_cli;
+        this.logradouro_cli = logadouro_cli;
     }
 
     public String getBairro_cli() {
