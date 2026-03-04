@@ -34,7 +34,12 @@ public class ClienteDAO {
 
             //Executa o comando SQL no banco de Dados
             stmt.execute(comando.toUpperCase());
+            
+            ConexaoDAO.con.commit();
+            
+            stmt.close();
             return true;
+            
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return false;

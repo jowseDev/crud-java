@@ -1,9 +1,21 @@
 package br.com.projeto_1.view;
 
 import java.awt.Dimension;
+import javax.swing.JOptionPane;
+import java.sql.ResultSet;
+import javax.swing.table.DefaultTableModel;
+import br.com.projeto_1.dto.ClienteDTO;
+import br.com.projeto_1.ctr.ClienteCTR;
+
+import java.awt.Dimension;
 
 public class ClienteVIEW extends javax.swing.JInternalFrame {
-
+    
+    ClienteDTO clienteDTO = new ClienteDTO();
+    ClienteCTR clienteCTR = new ClienteCTR();
+    
+    int gravar_alterar;
+    
     public ClienteVIEW() {
         initComponents();
     }
@@ -12,6 +24,29 @@ public class ClienteVIEW extends javax.swing.JInternalFrame {
         Dimension d = this.getDesktopPane().getSize();
         this.setLocation((d.width - this.getSize().width) / 2, (d.height - this.getSize().height) / 2);
     }
+    
+    private void liberaCampos(boolean a){
+        nome_cli.setEnabled(a);
+        logadouro_cli.setEnabled(a);
+        numero_cli.setEnabled(a);
+        bairro_cli.setEnabled(a);
+        cidade_cli.setEnabled(a);
+        cep_cli.setEnabled(a);
+        cpf_cli.setEnabled(a);
+        rg_cli.setEnabled(a);
+   }
+   
+   private void limpaCampos(){
+       nome_cli.setText("");
+       logadouro_cli.setText("");
+       numero_cli.setText("");
+       bairro_cli.setText("");
+       cidade_cli.setText("");
+       cep_cli.setText("");
+       cpf_cli.setText("");
+       rg_cli.setText("");
+   }
+   
      
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
