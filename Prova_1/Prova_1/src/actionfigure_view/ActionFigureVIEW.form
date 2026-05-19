@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JLabel" name="jLabel14">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ActionFigure"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="nome_acfg">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nome_acfgActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=" Nome do ACG:"/>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="3"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace pref="278" max="-2" attributes="0"/>
+                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="nome_acfg1" min="-2" pref="414" max="-2" attributes="0"/>
+                                  <Component id="personagem_acfg" alignment="0" min="-2" pref="413" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="280" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel10" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <Component id="conservacao_acfg" min="-2" pref="132" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="preco_acfg" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="edicaoColecionador_acfg" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="tamanho_acfg" alignment="0" max="32767" attributes="0"/>
+                          <Component id="raridade_acfg" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="pais_acfg" min="-2" pref="105" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="cor_acfg" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="300" max="-2" attributes="0"/>
+                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="btnNovo" max="32767" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="btnCancelar" min="-2" pref="163" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="btnSalvar" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="btnExcluir" min="-2" pref="119" max="-2" attributes="0"/>
+                                  <Component id="btnSair" min="-2" pref="119" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="numero_acfg" min="-2" pref="407" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="207" max="32767" attributes="0"/>
+                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="281" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="45" pref="45" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="pesquisa_nome_acfg" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane1" pref="376" max="32767" attributes="0"/>
+                          <Component id="btnConsultar" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+              <Component id="jLabel15" min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="nome_acfg1" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel12" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="personagem_acfg" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cor_acfg" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="preco_acfg" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tamanho_acfg" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="edicaoColecionador_acfg" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="raridade_acfg" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="conservacao_acfg" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="pais_acfg" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="numero_acfg" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnConsultar" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnNovo" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="btnCancelar" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="btnExcluir" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnSalvar" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="btnSair" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+              <Component id="jLabel16" min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="pesquisa_nome_acfg" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel15">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ActionFigure"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="nome_acfg1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nome_acfg1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=" Nome do ACG:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="numero_acfg">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numero_acfgActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Edi&#xe7;&#xe3;o de colecionador?:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cor:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pais de origem:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Raridade:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero identificador:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Estado de Conserva&#xe7;&#xe3;o:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tamanho:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel12">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Personagem ACG:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="personagem_acfg">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="personagem_acfgActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="cor_acfg">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cor_acfgActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="preco_acfg">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="preco_acfgActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="edicaoColecionador_acfg">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edicaoColecionador_acfgActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="conservacao_acfg">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="conservacao_acfgActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tamanho_acfg">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tamanho_acfgActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="raridade_acfg">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="raridade_acfgActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="pais_acfg">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="192">
+            <StringItem index="0" value="Afeganist&#xe3;o"/>
+            <StringItem index="1" value="Alb&#xe2;nia"/>
+            <StringItem index="2" value="Arg&#xe9;lia"/>
+            <StringItem index="3" value="Andorra"/>
+            <StringItem index="4" value="Angola"/>
+            <StringItem index="5" value="Argentina"/>
+            <StringItem index="6" value="Arm&#xea;nia"/>
+            <StringItem index="7" value="Austr&#xe1;lia"/>
+            <StringItem index="8" value="&#xc1;ustria"/>
+            <StringItem index="9" value="Azerbaij&#xe3;o"/>
+            <StringItem index="10" value="Bahamas"/>
+            <StringItem index="11" value="Bahrein"/>
+            <StringItem index="12" value="Bangladesh"/>
+            <StringItem index="13" value="Barbados"/>
+            <StringItem index="14" value="Belarus"/>
+            <StringItem index="15" value="B&#xe9;lgica"/>
+            <StringItem index="16" value="Belize"/>
+            <StringItem index="17" value="Benin"/>
+            <StringItem index="18" value="But&#xe3;o"/>
+            <StringItem index="19" value="Bol&#xed;via"/>
+            <StringItem index="20" value="B&#xf3;snia e Herzegovina"/>
+            <StringItem index="21" value="Botsuana"/>
+            <StringItem index="22" value="Brasil"/>
+            <StringItem index="23" value="Brunei"/>
+            <StringItem index="24" value="Bulg&#xe1;ria"/>
+            <StringItem index="25" value="Burkina Faso"/>
+            <StringItem index="26" value="Burundi"/>
+            <StringItem index="27" value="Cabo Verde"/>
+            <StringItem index="28" value="Camboja"/>
+            <StringItem index="29" value="Camar&#xf5;es"/>
+            <StringItem index="30" value="Canad&#xe1;"/>
+            <StringItem index="31" value="Rep&#xfa;blica Centro-Africana"/>
+            <StringItem index="32" value="Chade"/>
+            <StringItem index="33" value="Chile"/>
+            <StringItem index="34" value="China"/>
+            <StringItem index="35" value="Col&#xf4;mbia"/>
+            <StringItem index="36" value="Comores"/>
+            <StringItem index="37" value="Congo"/>
+            <StringItem index="38" value="Rep&#xfa;blica Democr&#xe1;tica do Congo"/>
+            <StringItem index="39" value="Costa Rica"/>
+            <StringItem index="40" value="Cro&#xe1;cia"/>
+            <StringItem index="41" value="Cuba"/>
+            <StringItem index="42" value="Chipre"/>
+            <StringItem index="43" value="Rep&#xfa;blica Tcheca"/>
+            <StringItem index="44" value="Dinamarca"/>
+            <StringItem index="45" value="Djibuti"/>
+            <StringItem index="46" value="Dominica"/>
+            <StringItem index="47" value="Rep&#xfa;blica Dominicana"/>
+            <StringItem index="48" value="Equador"/>
+            <StringItem index="49" value="Egito"/>
+            <StringItem index="50" value="El Salvador"/>
+            <StringItem index="51" value="Guin&#xe9; Equatorial"/>
+            <StringItem index="52" value="Eritreia"/>
+            <StringItem index="53" value="Est&#xf4;nia"/>
+            <StringItem index="54" value="Essuat&#xed;ni"/>
+            <StringItem index="55" value="Eti&#xf3;pia"/>
+            <StringItem index="56" value="Fiji"/>
+            <StringItem index="57" value="Finl&#xe2;ndia"/>
+            <StringItem index="58" value="Fran&#xe7;a"/>
+            <StringItem index="59" value="Gab&#xe3;o"/>
+            <StringItem index="60" value="G&#xe2;mbia"/>
+            <StringItem index="61" value="Ge&#xf3;rgia"/>
+            <StringItem index="62" value="Alemanha"/>
+            <StringItem index="63" value="Gana"/>
+            <StringItem index="64" value="Gr&#xe9;cia"/>
+            <StringItem index="65" value="Granada"/>
+            <StringItem index="66" value="Guatemala"/>
+            <StringItem index="67" value="Guin&#xe9;"/>
+            <StringItem index="68" value="Guin&#xe9;-Bissau"/>
+            <StringItem index="69" value="Guiana"/>
+            <StringItem index="70" value="Haiti"/>
+            <StringItem index="71" value="Honduras"/>
+            <StringItem index="72" value="Hungria"/>
+            <StringItem index="73" value="Isl&#xe2;ndia"/>
+            <StringItem index="74" value="&#xcd;ndia"/>
+            <StringItem index="75" value="Indon&#xe9;sia"/>
+            <StringItem index="76" value="Ir&#xe3;"/>
+            <StringItem index="77" value="Iraque"/>
+            <StringItem index="78" value="Irlanda"/>
+            <StringItem index="79" value="Israel"/>
+            <StringItem index="80" value="It&#xe1;lia"/>
+            <StringItem index="81" value="Jamaica"/>
+            <StringItem index="82" value="Jap&#xe3;o"/>
+            <StringItem index="83" value="Jord&#xe2;nia"/>
+            <StringItem index="84" value="Cazaquist&#xe3;o"/>
+            <StringItem index="85" value="Qu&#xea;nia"/>
+            <StringItem index="86" value="Kiribati"/>
+            <StringItem index="87" value="Coreia do Norte"/>
+            <StringItem index="88" value="Coreia do Sul"/>
+            <StringItem index="89" value="Kuwait"/>
+            <StringItem index="90" value="Quirguist&#xe3;o"/>
+            <StringItem index="91" value="Laos"/>
+            <StringItem index="92" value="Let&#xf4;nia"/>
+            <StringItem index="93" value="L&#xed;bano"/>
+            <StringItem index="94" value="Lesoto"/>
+            <StringItem index="95" value="Lib&#xe9;ria"/>
+            <StringItem index="96" value="L&#xed;bia"/>
+            <StringItem index="97" value="Liechtenstein"/>
+            <StringItem index="98" value="Litu&#xe2;nia"/>
+            <StringItem index="99" value="Luxemburgo"/>
+            <StringItem index="100" value="Madagascar"/>
+            <StringItem index="101" value="Malaui"/>
+            <StringItem index="102" value="Mal&#xe1;sia"/>
+            <StringItem index="103" value="Maldivas"/>
+            <StringItem index="104" value="Mali"/>
+            <StringItem index="105" value="Malta"/>
+            <StringItem index="106" value="Ilhas Marshall"/>
+            <StringItem index="107" value="Maurit&#xe2;nia"/>
+            <StringItem index="108" value="Maur&#xed;cio"/>
+            <StringItem index="109" value="M&#xe9;xico"/>
+            <StringItem index="110" value="Micron&#xe9;sia"/>
+            <StringItem index="111" value="Mold&#xe1;via"/>
+            <StringItem index="112" value="M&#xf4;naco"/>
+            <StringItem index="113" value="Mong&#xf3;lia"/>
+            <StringItem index="114" value="Montenegro"/>
+            <StringItem index="115" value="Marrocos"/>
+            <StringItem index="116" value="Mo&#xe7;ambique"/>
+            <StringItem index="117" value="Mianmar"/>
+            <StringItem index="118" value="Nam&#xed;bia"/>
+            <StringItem index="119" value="Nauru"/>
+            <StringItem index="120" value="Nepal"/>
+            <StringItem index="121" value="Pa&#xed;ses Baixos"/>
+            <StringItem index="122" value="Nova Zel&#xe2;ndia"/>
+            <StringItem index="123" value="Nicar&#xe1;gua"/>
+            <StringItem index="124" value="N&#xed;ger"/>
+            <StringItem index="125" value="Nig&#xe9;ria"/>
+            <StringItem index="126" value="Noruega"/>
+            <StringItem index="127" value="Om&#xe3;"/>
+            <StringItem index="128" value="Paquist&#xe3;o"/>
+            <StringItem index="129" value="Palau"/>
+            <StringItem index="130" value="Panam&#xe1;"/>
+            <StringItem index="131" value="Papua-Nova Guin&#xe9;"/>
+            <StringItem index="132" value="Paraguai"/>
+            <StringItem index="133" value="Peru"/>
+            <StringItem index="134" value="Filipinas"/>
+            <StringItem index="135" value="Pol&#xf4;nia"/>
+            <StringItem index="136" value="Portugal"/>
+            <StringItem index="137" value="Catar"/>
+            <StringItem index="138" value="Rom&#xea;nia"/>
+            <StringItem index="139" value="R&#xfa;ssia"/>
+            <StringItem index="140" value="Ruanda"/>
+            <StringItem index="141" value="S&#xe3;o Crist&#xf3;v&#xe3;o e Nevis"/>
+            <StringItem index="142" value="Santa L&#xfa;cia"/>
+            <StringItem index="143" value="S&#xe3;o Vicente e Granadinas"/>
+            <StringItem index="144" value="Samoa"/>
+            <StringItem index="145" value="San Marino"/>
+            <StringItem index="146" value="S&#xe3;o Tom&#xe9; e Pr&#xed;ncipe"/>
+            <StringItem index="147" value="Ar&#xe1;bia Saudita"/>
+            <StringItem index="148" value="Senegal"/>
+            <StringItem index="149" value="S&#xe9;rvia"/>
+            <StringItem index="150" value="Seychelles"/>
+            <StringItem index="151" value="Serra Leoa"/>
+            <StringItem index="152" value="Singapura"/>
+            <StringItem index="153" value="Eslov&#xe1;quia"/>
+            <StringItem index="154" value="Eslov&#xea;nia"/>
+            <StringItem index="155" value="Ilhas Salom&#xe3;o"/>
+            <StringItem index="156" value="Som&#xe1;lia"/>
+            <StringItem index="157" value="&#xc1;frica do Sul"/>
+            <StringItem index="158" value="Sud&#xe3;o do Sul"/>
+            <StringItem index="159" value="Espanha"/>
+            <StringItem index="160" value="Sri Lanka"/>
+            <StringItem index="161" value="Sud&#xe3;o"/>
+            <StringItem index="162" value="Suriname"/>
+            <StringItem index="163" value="Su&#xe9;cia"/>
+            <StringItem index="164" value="Su&#xed;&#xe7;a"/>
+            <StringItem index="165" value="S&#xed;ria"/>
+            <StringItem index="166" value="Taiwan"/>
+            <StringItem index="167" value="Tadjiquist&#xe3;o"/>
+            <StringItem index="168" value="Tanz&#xe2;nia"/>
+            <StringItem index="169" value="Tail&#xe2;ndia"/>
+            <StringItem index="170" value="Timor-Leste"/>
+            <StringItem index="171" value="Togo"/>
+            <StringItem index="172" value="Tonga"/>
+            <StringItem index="173" value="Trinidad e Tobago"/>
+            <StringItem index="174" value="Tun&#xed;sia"/>
+            <StringItem index="175" value="Turquia"/>
+            <StringItem index="176" value="Turcomenist&#xe3;o"/>
+            <StringItem index="177" value="Tuvalu"/>
+            <StringItem index="178" value="Uganda"/>
+            <StringItem index="179" value="Ucr&#xe2;nia"/>
+            <StringItem index="180" value="Emirados &#xc1;rabes Unidos"/>
+            <StringItem index="181" value="Reino Unido"/>
+            <StringItem index="182" value="Estados Unidos"/>
+            <StringItem index="183" value="Uruguai"/>
+            <StringItem index="184" value="Uzbequist&#xe3;o"/>
+            <StringItem index="185" value="Vanuatu"/>
+            <StringItem index="186" value="Vaticano"/>
+            <StringItem index="187" value="Venezuela"/>
+            <StringItem index="188" value="Vietn&#xe3;"/>
+            <StringItem index="189" value="I&#xea;men"/>
+            <StringItem index="190" value="Z&#xe2;mbia"/>
+            <StringItem index="191" value="Zimb&#xe1;bue"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pais_acfgActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pre&#xe7;o:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel16">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consulta"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="jtl_consultar_actionfigure">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="4">
+                <Column editable="true" title="Id" type="java.lang.Object"/>
+                <Column editable="true" title="Nome" type="java.lang.Object"/>
+              </Table>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jtl_consultar_actionfigureMouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="btnConsultar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consultar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConsultarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSalvar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salvar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalvarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnCancelar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnExcluir">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Excluir"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExcluirActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSair">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sair"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSairActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnNovo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Novo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNovoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel17">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nome:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="pesquisa_nome_acfg">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesquisa_nome_acfgActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>

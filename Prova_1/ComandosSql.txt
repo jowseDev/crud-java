@@ -1,0 +1,63 @@
+CREATE TABLE action_figure
+(
+    id_acfg serial,
+    nome_acfg character varying(100),
+    personagem_acfg character varying(100),
+    cor_acfg character varying(50),
+    conservacao_acfg character varying(50),
+    edicao_colecionador_acfg character varying(10),
+    raridade_acfg character varying(50),
+    tamanho_acfg character varying(50),
+    pais_acfg character varying(50),
+    preco_acfg integer,
+    numero_acfg integer,
+    
+    CONSTRAINT action_figure_pkey PRIMARY KEY (id_acfg)
+);
+
+
+INSERT INTO action_figure
+(nome_acfg, personagem_acfg, cor_acfg, conservacao_acfg, edicao_colecionador_acfg, raridade_acfg, tamanho_acfg, pais_acfg, preco_acfg, numero_acfg)
+VALUES
+('Shinji Ikari Figure', 'Shinji Ikari', 'Branco e Azul', 'Novo', 'Sim', 'Raro', '28cm', 'Japão', 300, 1),
+
+('Rei Ayanami Figure', 'Rei Ayanami', 'Branco', 'Novo', 'Sim', 'Raro', '27cm', 'Japão', 320, 2),
+
+('Asuka Langley Figure', 'Asuka Langley', 'Vermelho', 'Novo', 'Sim', 'Raro', '29cm', 'Japão', 350, 3),
+
+('Light Yagami Figure', 'Light Yagami', 'Preto', 'Novo', 'Sim', 'Raro', '26cm', 'Japão', 280, 4),
+
+('L Lawliet Figure', 'L Lawliet', 'Branco', 'Novo', 'Não', 'Comum', '25cm', 'Japão', 200, 5),
+
+('Ryuk Figure', 'Ryuk', 'Preto', 'Novo', 'Sim', 'Épico', '30cm', 'Japão', 400, 6),
+
+('Naruto Uzumaki Figure', 'Naruto Uzumaki', 'Laranja', 'Novo', 'Não', 'Comum', '24cm', 'Japão', 180, 7),
+
+('Sasuke Uchiha Figure', 'Sasuke Uchiha', 'Azul', 'Novo', 'Sim', 'Raro', '25cm', 'Japão', 220, 8),
+
+('Goku Super Saiyajin Figure', 'Goku', 'Laranja e Amarelo', 'Novo', 'Sim', 'Épico', '32cm', 'Japão', 450, 9),
+
+('Vegeta Figure', 'Vegeta', 'Azul e Branco', 'Novo', 'Sim', 'Raro', '30cm', 'Japão', 420, 10),
+
+('Ichigo Kurosaki Figure', 'Ichigo', 'Preto e Laranja', 'Novo', 'Não', 'Comum', '26cm', 'Japão', 210, 11),
+
+('Levi Ackerman Figure', 'Levi Ackerman', 'Verde e Marrom', 'Novo', 'Sim', 'Raro', '23cm', 'Japão', 260, 12),
+
+('Eren Yeager Figure', 'Eren Yeager', 'Marrom', 'Novo', 'Não', 'Comum', '24cm', 'Japão', 190, 13),
+
+('Mikasa Ackerman Figure', 'Mikasa Ackerman', 'Preto e Vermelho', 'Novo', 'Sim', 'Raro', '24cm', 'Japão', 270, 14),
+
+('Gojo Satoru Figure', 'Gojo Satoru', 'Preto', 'Novo', 'Sim', 'Épico', '28cm', 'Japão', 380, 15),
+
+('Yuji Itadori Figure', 'Yuji Itadori', 'Vermelho e Preto', 'Novo', 'Não', 'Comum', '25cm', 'Japão', 200, 16),
+
+('Tanjiro Kamado Figure', 'Tanjiro', 'Verde e Preto', 'Novo', 'Sim', 'Raro', '26cm', 'Japão', 240, 17),
+
+('Nezuko Kamado Figure', 'Nezuko', 'Rosa', 'Novo', 'Sim', 'Raro', '22cm', 'Japão', 230, 18),
+
+('Edward Elric Figure', 'Edward Elric', 'Vermelho', 'Novo', 'Sim', 'Raro', '25cm', 'Japão', 260, 19),
+
+('Alphonse Elric Figure', 'Alphonse Elric', 'Cinza', 'Novo', 'Sim', 'Épico', '33cm', 'Japão', 390, 20);
+
+select * from action_figure
+
