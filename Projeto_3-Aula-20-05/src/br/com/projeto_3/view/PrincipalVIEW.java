@@ -91,63 +91,75 @@ public class PrincipalVIEW extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void itemMenuProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuProdutoActionPerformed
-abreProdutoVIEW();        // TODO add your handling code here:
+        abreProdutoVIEW(); 
     }//GEN-LAST:event_itemMenuProdutoActionPerformed
 
     private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
-sair();        // TODO add your handling code here:
+        sair();       
     }//GEN-LAST:event_menuSairActionPerformed
 
     private void itemMenuClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuClienteActionPerformed
-abreClienteVIEW();        // TODO add your handling code here:
+        abreClienteVIEW();
     }//GEN-LAST:event_itemMenuClienteActionPerformed
 
     private void itemMenuFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuFornecedorActionPerformed
-abreFornecedorVIEW();        // TODO add your handling code here:
+        abreFornecedorVIEW();  
     }//GEN-LAST:event_itemMenuFornecedorActionPerformed
 
     private void itemMenuVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuVendaActionPerformed
-abreVendaVIEW();        // TODO add your handling code here:
+        abreVendaVIEW();    
     }//GEN-LAST:event_itemMenuVendaActionPerformed
 
     private void itemMenuFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuFuncionarioActionPerformed
-        // TODO add your handling code here:
+        abreFuncionarioVIEW();
     }//GEN-LAST:event_itemMenuFuncionarioActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    private void sair(){
-        Object[] options  = { "Sair", "Cancelar" };
-        if(JOptionPane.showOptionDialog(null, "Deseja sair do Sistema? ", "Informação", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]) == 0){
+    private void sair() {
+        Object[] options = {"Sair", "Cancelar"};
+        if (JOptionPane.showOptionDialog(null, "Deseja sair do Sistema? ", "Informação", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]) == 0) {
             System.exit(0);
-               
-   }}
-     private void abreFornecedorVIEW(){
-        FornecedorVIEW  fornecedorVIEW = new FornecedorVIEW();
+
+        }
+    }
+
+    private void abreFornecedorVIEW() {
+        FornecedorVIEW fornecedorVIEW = new FornecedorVIEW();
         this.desktopPane.add(fornecedorVIEW);
         fornecedorVIEW.setVisible(true);
         fornecedorVIEW.setPosicao();
     }
-     private void abreProdutoVIEW(){
-        ProdutoVIEW  produtoVIEW = new ProdutoVIEW();
+
+    private void abreProdutoVIEW() {
+        ProdutoVIEW produtoVIEW = new ProdutoVIEW();
         this.desktopPane.add(produtoVIEW);
         produtoVIEW.setVisible(true);
         produtoVIEW.setPosicao();
     }
-     private void abreClienteVIEW(){
-        ClienteVIEW  clienteVIEW = new ClienteVIEW();
+
+    private void abreClienteVIEW() {
+        ClienteVIEW clienteVIEW = new ClienteVIEW();
         this.desktopPane.add(clienteVIEW);
         clienteVIEW.setVisible(true);
         clienteVIEW.setPosicao();
     }
-     
-     private void abreVendaVIEW(){
-        VendaVIEW  vendaVIEW = new VendaVIEW();
+
+    private void abreVendaVIEW() {
+        VendaVIEW vendaVIEW = new VendaVIEW();
         this.desktopPane.add(vendaVIEW);
         vendaVIEW.setVisible(true);
         vendaVIEW.setPosicao();
     }
+    
+    private void abreFuncionarioVIEW() {
+    FuncionarioVIEW funcionarioVIEW = new FuncionarioVIEW();
+    this.desktopPane.add(funcionarioVIEW);
+    funcionarioVIEW.setVisible(true);
+    funcionarioVIEW.setPosicao();
+}
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
