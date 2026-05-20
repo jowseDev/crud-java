@@ -16,6 +16,7 @@ public class FuncionarioDAO {
 
     private ResultSet rs = null;
     private Statement stmt = null;
+    // teste
 
     public boolean inserirFuncionario(FuncionarioDTO funcionarioDTO) {
         try {
