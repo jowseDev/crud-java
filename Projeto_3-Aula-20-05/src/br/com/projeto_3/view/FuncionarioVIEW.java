@@ -240,7 +240,7 @@ public class FuncionarioVIEW extends javax.swing.JInternalFrame {
 
         jLabel8.setText("Tipo:");
 
-        tipo_fun.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admiministrador", "Comum" }));
+        tipo_fun.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Comum" }));
         tipo_fun.setToolTipText("");
 
         checkAlterarSenha.setText("Alterar Senha");
