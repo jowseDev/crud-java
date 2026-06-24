@@ -1,0 +1,109 @@
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
+DROP TABLE IF EXISTS produto_v CASCADE;
+DROP TABLE IF EXISTS venda CASCADE;
+DROP TABLE IF EXISTS produto CASCADE;
+DROP TABLE IF EXISTS fornecedor CASCADE;
+DROP TABLE IF EXISTS cliente CASCADE;
+DROP TABLE IF EXISTS funcionario CASCADE;
+
+CREATE TABLE fornecedor(
+    id_f SERIAL PRIMARY KEY,
+    nome_f VARCHAR(50) NOT NULL,
+    cnpj_f VARCHAR(18),
+    tel_f VARCHAR(15),
+    data_cad_f DATE
+);
+
+CREATE TABLE produto(
+    id_p SERIAL PRIMARY KEY,
+    nome_p VARCHAR(50) NOT NULL,
+    desc_p VARCHAR(100),
+    cod_bar_p VARCHAR(20),
+    pcusto_p DOUBLE PRECISION,
+    pvenda_p DOUBLE PRECISION,
+    id_f INTEGER NOT NULL,
+    CONSTRAINT produto_fornecedor_fk
+        FOREIGN KEY(id_f)
+        REFERENCES fornecedor(id_f)
+);
+
+CREATE TABLE cliente(
+    id_cli SERIAL PRIMARY KEY,
+    nome_cli VARCHAR(50) NOT NULL,
+    logradouro_cli VARCHAR(50),
+    numero_cli INTEGER,
+    bairro_cli VARCHAR(30),
+    cidade_cli VARCHAR(30),
+    estado_cli VARCHAR(2),
+    cep_cli VARCHAR(10),
+    cpf_cli VARCHAR(14),
+    rg_cli VARCHAR(15)
+);
+
+CREATE TABLE venda(
+    id_v SERIAL PRIMARY KEY,
+    dat_v DATE,
+    val_v DOUBLE PRECISION,
+    id_cli INTEGER NOT NULL,
+    CONSTRAINT venda_cliente_fk
+        FOREIGN KEY(id_cli)
+        REFERENCES cliente(id_cli)
+);
+
+CREATE TABLE produto_v(
+    id_v INTEGER NOT NULL,
+    id_p INTEGER NOT NULL,
+    val_p DOUBLE PRECISION,
+    qtd_p INTEGER,
+
+    CONSTRAINT produto_v_venda_fk
+        FOREIGN KEY(id_v)
+        REFERENCES venda(id_v),
+
+    CONSTRAINT produto_v_produto_fk
+        FOREIGN KEY(id_p)
+        REFERENCES produto(id_p)
+);
+
+CREATE TABLE funcionario(
+    id_fun SERIAL PRIMARY KEY,
+    nome_fun VARCHAR(50) NOT NULL,
+    cpf_fun VARCHAR(14),
+    login_fun VARCHAR(30) UNIQUE NOT NULL,
+    senha_fun VARCHAR(255) NOT NULL,
+    tipo_fun VARCHAR(20) NOT NULL
+);
+
+
+
+INSERT INTO fornecedor (nome_f, cnpj_f, tel_f, data_cad_f) VALUES
+('Distribuidora Ambev', '12345678000101', '17996541234', CURRENT_DATE),
+('Coca-Cola FEMSA', '22345678000102', '17996541235', CURRENT_DATE),
+('Heineken Brasil', '32345678000103', '17996541236', CURRENT_DATE),
+('Adega Premium Distribuicao', '42345678000104', '17996541237', CURRENT_DATE),
+('Bebidas Rio Preto', '52345678000105', '17996541238', CURRENT_DATE);
+
+INSERT INTO produto (nome_p, desc_p, cod_bar_p, pcusto_p, pvenda_p, id_f) VALUES
+('Skol 350ml', 'Lata de cerveja Skol 350ml', '789100000001', 2.80, 4.99, 1),
+('Brahma 350ml', 'Lata de cerveja Brahma 350ml', '789100000002', 2.90, 5.29, 1),
+('Heineken Long Neck', 'Garrafa Heineken 330ml', '789100000003', 4.50, 8.99, 3),
+('Coca-Cola 2L', 'Refrigerante Coca-Cola 2 Litros', '789100000004', 6.50, 10.99, 2),
+('Guarana Antarctica 2L', 'Refrigerante Guarana Antarctica 2 Litros', '789100000005', 5.50, 9.99, 1),
+('Whisky Red Label', 'Whisky Johnnie Walker Red Label 1L', '789100000006', 79.90, 119.90, 4),
+('Whisky Black Label', 'Whisky Johnnie Walker Black Label 1L', '789100000007', 129.90, 189.90, 4),
+('Vodka Smirnoff', 'Vodka Smirnoff 998ml', '789100000008', 29.90, 49.90, 4),
+('Gin Tanqueray', 'Gin Tanqueray London Dry 750ml', '789100000009', 69.90, 109.90, 4),
+('Energetico Red Bull', 'Lata Red Bull 250ml', '789100000010', 6.00, 11.99, 5);
+
+INSERT INTO cliente (nome_cli, logradouro_cli, numero_cli, bairro_cli, cidade_cli, estado_cli, cep_cli, cpf_cli, rg_cli) VALUES
+('Carlos Eduardo', 'Rua Amazonas', 120, 'Centro', 'Votuporanga', 'SP', '15500-000', '111.111.111-11', '11.111.111-1'),
+('Ana Carolina', 'Rua Para', 450, 'Pozzobon', 'Votuporanga', 'SP', '15500-001', '222.222.222-22', '22.222.222-2'),
+('Marcos Vinicius', 'Rua Minas Gerais', 200, 'Patrimonio Novo', 'Votuporanga', 'SP', '15500-002', '333.333.333-33', '33.333.333-3'),
+('Fernanda Souza', 'Rua Sao Paulo', 890, 'Centro', 'Votuporanga', 'SP', '15500-003', '444.444.444-44', '44.444.444-4'),
+('Lucas Oliveira', 'Av. Emilio Arroyo Hernandes', 1200, 'Vila Paes', 'Votuporanga', 'SP', '15500-004', '555.555.555-55', '55.555.555-5');
+
+INSERT INTO funcionario (nome_fun, cpf_fun, login_fun, senha_fun, tipo_fun) VALUES
+('Kevin Administrador', '000.000.000-00', 'kev', crypt('123456', gen_salt('bf', 8)), 'ADMINISTRADOR'),
+('Jose Augusto', '111.111.111-11', 'jose', crypt('123456', gen_salt('bf', 8)), 'USUARIO'),
+('Maria Gerente', '222.222.222-22', 'maria', crypt('123456', gen_salt('bf', 8)), 'ADMINISTRADOR');

@@ -65,6 +65,11 @@ public class PrincipalVIEW extends javax.swing.JFrame {
 
         menuSair.setMnemonic('h');
         menuSair.setText("Sair");
+        menuSair.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menuSairMouseClicked(evt);
+            }
+        });
         menuSair.addActionListener(this::menuSairActionPerformed);
         menuBar.add(menuSair);
 
@@ -95,7 +100,7 @@ public class PrincipalVIEW extends javax.swing.JFrame {
     }//GEN-LAST:event_itemMenuProdutoActionPerformed
 
     private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
-        sair();       
+       sair();
     }//GEN-LAST:event_menuSairActionPerformed
 
     private void itemMenuClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuClienteActionPerformed
@@ -113,6 +118,10 @@ public class PrincipalVIEW extends javax.swing.JFrame {
     private void itemMenuFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuFuncionarioActionPerformed
         abreFuncionarioVIEW();
     }//GEN-LAST:event_itemMenuFuncionarioActionPerformed
+
+    private void menuSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuSairMouseClicked
+      sair();
+    }//GEN-LAST:event_menuSairMouseClicked
 
     /**
      * @param args the command line arguments

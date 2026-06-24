@@ -13,125 +13,119 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class FornecedorVIEW extends javax.swing.JInternalFrame {
-    
-        SimpleDateFormat data_format = new SimpleDateFormat("dd/MM/yyyy");
 
+    SimpleDateFormat data_format = new SimpleDateFormat("dd/MM/yyyy");
 
     FornecedorDTO fornecedorDTO = new FornecedorDTO();
     FornecedorCTR fornecedorCTR = new FornecedorCTR();
 
     int gravar_alterar;
     ResultSet rs;
-    
+
     DefaultTableModel modelo_jtl_consultar_fornecedor;
-    
-     public void setPosicao(){
-            Dimension d = this.getDesktopPane().getSize();
-            this.setLocation((d.width - this.getSize().width) / 2, (d.height - this.getSize().height) / 2);
+
+    public void setPosicao() {
+        Dimension d = this.getDesktopPane().getSize();
+        this.setLocation((d.width - this.getSize().width) / 2, (d.height - this.getSize().height) / 2);
     }
-     
-     private void gravar(){
-        try{
+
+    private void gravar() {
+        try {
             fornecedorDTO.setNome_f(nome_f.getText());
             fornecedorDTO.setCnpj_f(cnpj_f.getText());
             fornecedorDTO.setTel_f(tel_f.getText());
             fornecedorDTO.setData_cad_f(data_format.parse(data_cad_f.getText()));
-            
+
             JOptionPane.showMessageDialog(null, fornecedorCTR.inserirFornecedor(fornecedorDTO));
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             System.out.println("Erro ao gravar!3" + e.getMessage());
         }
     }
-     
-     private void alterar(){
-        try{
-            
+
+    private void alterar() {
+        try {
+
             fornecedorDTO.setNome_f(nome_f.getText());
             fornecedorDTO.setCnpj_f(cnpj_f.getText());
             fornecedorDTO.setTel_f(tel_f.getText());
             fornecedorDTO.setData_cad_f(data_format.parse(data_cad_f.getText()));
-            
+
             JOptionPane.showMessageDialog(null, fornecedorCTR.alterarFornecedor(fornecedorDTO));
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             System.out.println("ERRO ao alterar1" + e.getMessage());
         }
-        
-    }       
-      private void excluir(){          
-        if(JOptionPane.showConfirmDialog(null, "Deseja realmente excluir o Cliente?", "Aviso", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
-JOptionPane.showMessageDialog(null, fornecedorCTR.excluirFornecedor(fornecedorDTO));
+
     }
-      }
-      
-      private void liberaCampos(boolean a){
+
+    private void excluir() {
+        if (JOptionPane.showConfirmDialog(null, "Deseja realmente excluir o Cliente?", "Aviso", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, fornecedorCTR.excluirFornecedor(fornecedorDTO));
+        }
+    }
+
+    private void liberaCampos(boolean a) {
         nome_f.setEnabled(a);
         cnpj_f.setEnabled(a);
         tel_f.setEnabled(a);
         data_cad_f.setEnabled(a);
     }
-    
-      private void liberaBotoes(boolean a,  boolean b, boolean c, boolean d, boolean e){
+
+    private void liberaBotoes(boolean a, boolean b, boolean c, boolean d, boolean e) {
         btnNovo.setEnabled(a);
         btnSalvar.setEnabled(b);
         btnCancelar.setEnabled(c);
         btnExcluir.setEnabled(d);
         btnSair.setEnabled(e);
     }
-      
-      private void limpaCampos(){
+
+    private void limpaCampos() {
         nome_f.setText("");
         cnpj_f.setText("");
         tel_f.setText("");
         data_cad_f.setText("");
-        
+
     }
-      
-      private void preencheTabela(String nome_f){
-        try{
+
+    private void preencheTabela(String nome_f) {
+        try {
             modelo_jtl_consultar_fornecedor.setNumRows(0);
             fornecedorDTO.setNome_f(nome_f);
             rs = fornecedorCTR.consultarFornecedor(fornecedorDTO, 1);
-            while(rs.next()){
+            while (rs.next()) {
                 modelo_jtl_consultar_fornecedor.addRow(new Object[]{
-                rs.getString("id_f"),
-                rs.getString("nome_f"),
-            });
+                    rs.getString("id_f"),
+                    rs.getString("nome_f"),});
             }
-        }
-        catch(Exception erTab){
-            System.out.println("ERRO SQL: " +erTab);
-        }
-        finally{
+        } catch (Exception erTab) {
+            System.out.println("ERRO SQL: " + erTab);
+        } finally {
             fornecedorCTR.CloseDB();
         }
     }
-      
-      private void preencheCampos(int id_f){
-        try{
+
+    private void preencheCampos(int id_f) {
+        try {
             fornecedorDTO.setId_f(id_f);
             rs = fornecedorCTR.consultarFornecedor(fornecedorDTO, 2);
-            if(rs.next()){
+            if (rs.next()) {
                 limpaCampos();
                 nome_f.setText(rs.getString("nome_f"));
                 cnpj_f.setText(rs.getString("cnpj_f"));
                 tel_f.setText(rs.getString("tel_f"));
                 data_cad_f.setText(rs.getString("data_cad_f"));
-                
-                gravar_alterar=2;
+
+                gravar_alterar = 2;
                 liberaCampos(true);
-                
+
             }
-        }
-        catch(Exception erTab){
-            System.out.println("ERRO SQL: "+erTab); 
-        }
-        finally{
+        } catch (Exception erTab) {
+            System.out.println("ERRO SQL: " + erTab);
+        } finally {
             fornecedorCTR.CloseDB();
         }
     }
-    
 
     /**
      * Creates new form FornecedorVIEW
@@ -350,59 +344,58 @@ JOptionPane.showMessageDialog(null, fornecedorCTR.excluirFornecedor(fornecedorDT
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
-liberaCampos(true);
-liberaBotoes(false, true, true, true, false);
-gravar_alterar=1;// TODO add your handling code here:
+        liberaCampos(true);
+        liberaBotoes(false, true, true, true, false);
+        gravar_alterar = 1;// TODO add your handling code here:
     }//GEN-LAST:event_btnNovoActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-if (gravar_alterar==1){
-    gravar();
-gravar_alterar=0;
-}else{
-    if(gravar_alterar == 2){
-        alterar();
-        gravar_alterar=0;
-    }
-    else{
-        JOptionPane.showMessageDialog(null, "Erro no sistema!!");
-    }
-}
-limpaCampos();
-liberaCampos(false);
-liberaBotoes(true, false, false, false, true);        // TODO add your handling code here:
+        if (gravar_alterar == 1) {
+            gravar();
+            gravar_alterar = 0;
+        } else {
+            if (gravar_alterar == 2) {
+                alterar();
+                gravar_alterar = 0;
+            } else {
+                JOptionPane.showMessageDialog(null, "Erro no sistema!!");
+            }
+        }
+        limpaCampos();
+        liberaCampos(false);
+        liberaBotoes(true, false, false, false, true);        // TODO add your handling code here:
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
-preencheTabela(pesquisa_nome_f.getText());        // TODO add your handling code here:
+        preencheTabela(pesquisa_nome_f.getText());        // TODO add your handling code here:
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPesquisarActionPerformed
 
     private void jtl_consultar_fornecedorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtl_consultar_fornecedorMouseClicked
-preencheCampos(Integer.parseInt(String.valueOf(jtl_consultar_fornecedor.getValueAt(jtl_consultar_fornecedor
-        .getSelectedRow(), 0))));
-liberaBotoes(false, true, true, true, true);        // TODO add your handling code here:
+        preencheCampos(Integer.parseInt(String.valueOf(jtl_consultar_fornecedor.getValueAt(jtl_consultar_fornecedor
+                .getSelectedRow(), 0))));
+        liberaBotoes(false, true, true, true, true);        // TODO add your handling code here:
     }//GEN-LAST:event_jtl_consultar_fornecedorMouseClicked
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
         // TODO add your ha
         excluir();
-limpaCampos();
-liberaCampos(false);
-liberaBotoes(true, false, false, false, true);
-modelo_jtl_consultar_fornecedor.setNumRows(0);
+        limpaCampos();
+        liberaCampos(false);
+        liberaBotoes(true, false, false, false, true);
+        modelo_jtl_consultar_fornecedor.setNumRows(0);
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-limpaCampos();
-liberaCampos(false);
-modelo_jtl_consultar_fornecedor.setNumRows(0);
-liberaBotoes(true, false, false, false, true);
-gravar_alterar=0;        // TODO add your handling code here:
+        limpaCampos();
+        liberaCampos(false);
+        modelo_jtl_consultar_fornecedor.setNumRows(0);
+        liberaBotoes(true, false, false, false, true);
+        gravar_alterar = 0;        // TODO add your handling code here:
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-this.dispose();        // TODO add your handling code here:
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnSairActionPerformed
 
 
